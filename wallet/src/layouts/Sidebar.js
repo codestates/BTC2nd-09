@@ -45,12 +45,12 @@ const navigation = [
 
   
   {
-    title: "Wallet for Dev",
+    title: "Do Kwon Wallet",
     href: "/wallet",
     icon: "bi bi-textarea-resize",
   },
   {
-    title: "Explorer for Dev",
+    title: "Do Kwon Explorer",
     href: "/explorer",
     icon: "bi bi-textarea-resize",
   },
