@@ -3,9 +3,11 @@ const app = express();
 const block = require("./routes/block");
 const transaction = require("./routes/transaction");
 const { sequelize } = require("./models");
+const cors = require("cors");
 
 const PORT = 4000;
 
+app.use(cors());
 app.use(express.json());
 app.use("/block", block);
 app.use("/transaction", transaction);
