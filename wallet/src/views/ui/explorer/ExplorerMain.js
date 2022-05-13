@@ -1,143 +1,111 @@
-import ProjectTables from "../../../components/dashboard/ProjectTable";
-import { Row, Col, Table, Card, CardTitle, CardBody } from "reactstrap";
+import { Row, Col, Table, Card, CardTitle, CardSubtitle, CardBody } from "reactstrap";
 
 const Tables = () => {
+
+  const tableData = [
+    {
+      index: "1",
+      txhash: "0xjdjdjididjidjidjdi",
+      blockno: "120202020",
+      date: "2022/5/13 03:44:12",
+    },
+    {
+      index: "2",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "3",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "4",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "5",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "6",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "7",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "8",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "9",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+    {
+      index: "10",
+      txhash: "0xdfnjwoceonownfoeno",
+      blockno: "20200220",
+      date: "2022/5/13 03:44:13",
+    },
+  ];
+
   return (
     <Row>
       {/* --------------------------------------------------------------------------------*/}
-      {/* table-1*/}
+      {/* Block/}
       {/* --------------------------------------------------------------------------------*/}
       <Col lg="12">
-        <ProjectTables />
-      </Col>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-2*/}
-      {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-card-text me-2"> </i>
-            일단 대충 익스플로러 - Table with Border
-          </CardTitle>
-          <CardBody className="">
-            <Table bordered>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+      <div>
+      <Card>
+        <CardBody>
+        <CardTitle tag="h5">Block Explorer</CardTitle>
+          {/*<CardSubtitle className="mb-2 text-muted" tag="h6">
+          Block Explorer
+          </CardSubtitle>*/}
+          <Table className="no-wrap mt-3 align-middle" responsive borderless>
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Tx Hash</th>
+                <th>Block Number</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData.map((tdata, index) => (
+                <tr key={index} className="border-top">
+                  <td>
+                      <div className="ms-3">
+                        <h6 className="mb-0">{tdata.index}</h6>
+                      </div>
+                  </td>
+                  <td>{tdata.txhash}</td>
+                  <td>{tdata.blockno}
+                  </td>
+                  <td>{tdata.date}</td>
                 </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
-      </Col>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-3*/}
-      {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-card-text me-2"> </i>
-            Table with Striped
-          </CardTitle>
-          <CardBody className="">
-            <Table bordered striped>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
-      </Col>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-3*/}
-      {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-card-text me-2"> </i>
-            Table with Hover
-          </CardTitle>
-          <CardBody className="">
-            <Table bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
+              ))}
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>
+    </div>
       </Col>
     </Row>
   );
