@@ -8,8 +8,13 @@ const navigation = [
     icon: "bi bi-textarea-resize",
   },
   {
-    title: "Do Kwon Explorer",
-    href: "/explorer",
+    title: "Do Kwon Test Explorer",
+    href: "/explorertest",
+    icon: "bi bi-textarea-resize",
+  },
+  {
+    title: "Do Kwon Main Explorer",
+    href: "/explorermain",
     icon: "bi bi-textarea-resize",
   },
 ];
