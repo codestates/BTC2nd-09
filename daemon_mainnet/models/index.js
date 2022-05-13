@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 const Sequelize = require("sequelize");
 
 const Block = require("./Block");
@@ -22,8 +22,5 @@ db.transaction = Transaction;
 
 Block.init(sequelize);
 Transaction.init(sequelize);
-
-// Block.associate(db);
-// Transaction.associate(db);
 
 module.exports = db;

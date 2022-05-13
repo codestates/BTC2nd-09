@@ -4,13 +4,12 @@ const block = require("./routes/block");
 const transaction = require("./routes/transaction");
 const { sequelize } = require("./models");
 const cors = require("cors");
-
-const PORT = 4000;
+const PORT = 8080;
 
 app.use(cors());
 app.use(express.json());
-app.use("/testblock", block);
-app.use("/testtransaction", transaction);
+app.use("/mainblock", block);
+app.use("/maintransaction", transaction);
 
 sequelize
   .sync({ force: false })
@@ -22,5 +21,5 @@ sequelize
   });
 
 app.listen(PORT, () => {
-  console.log(`Testnet서버 ${PORT}에서 가동중 🚀`);
+  console.log(`Mainnet서버 ${PORT}에서 가동중 🚀`);
 });

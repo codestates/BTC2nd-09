@@ -16,7 +16,7 @@ const Tables = () => {
   useEffect(() => {
     const getBlock = async () => {
       const block = await axios
-        .get("http://localhost:4000/block")
+        .get("http://localhost:4000/testblock")
         .then((res) => {
           setBlockInfo(res.data.blockInfo);
         });
@@ -24,69 +24,6 @@ const Tables = () => {
     };
     getBlock();
   });
-
-  const tableData = [
-    {
-      index: "1",
-      txhash: "0xjdjdjididjidjidjdi",
-      blockno: "120202020",
-      date: "2022/5/13 03:44:12",
-    },
-    {
-      index: "2",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "3",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "4",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "5",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "6",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "7",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "8",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "9",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-    {
-      index: "10",
-      txhash: "0xdfnjwoceonownfoeno",
-      blockno: "20200220",
-      date: "2022/5/13 03:44:13",
-    },
-  ];
 
   return (
     <Row>
@@ -110,7 +47,6 @@ const Tables = () => {
                   <tr>
                     <th>Height</th>
                     <th>DataHash</th>
-                    <th>LastCommitHash</th>
                     <th>Time</th>
                   </tr>
                 </thead>
@@ -123,7 +59,6 @@ const Tables = () => {
                         </div>
                       </td>
                       <td>{bdata.data_hash}</td>
-                      <td>{bdata.last_commit_hash}</td>
                       <td>{bdata.time}</td>
                     </tr>
                   ))}

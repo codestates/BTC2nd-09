@@ -17,6 +17,7 @@ const getBlockInfo = async () => {
     axios
       .get("https://bombay-lcd.terra.dev/blocks/latest")
       .then((res) => {
+        console.log(res.data.block.header);
         return res.data.block.header;
       })
       .then((res) => {

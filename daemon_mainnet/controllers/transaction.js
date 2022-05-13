@@ -1,10 +1,10 @@
 const models = require("../models");
 
 module.exports = {
-  getBlockInfo: async (req, res, next) => {
+  getTransactionInfo: async (req, res, next) => {
     try {
-      const blockInfo = await models.block.findAll();
-      if (blockInfo) res.status(200).json({ blockInfo });
+      const txInfo = await models.transaction.findAll();
+      if (txInfo) res.status(200).json({ txInfo });
     } catch (err) {
       console.log(err);
       res.status(404).send({
